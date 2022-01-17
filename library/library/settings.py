@@ -19,7 +19,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-p9s9k&o-$l0gnp@7y@^-fkizxu$&f6g86p*d%4aa)qs+p%isih"
+SECRET_KEY = (
+    "django-insecure-p9s9k&o-$l0gnp@7y@^-fkizxu$&f6g86p*d%4aa)qs+p%isih"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,5 +134,7 @@ AUTH_USER_MODEL = "userapp.User"
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 100,
-    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend"
+    ],
 }

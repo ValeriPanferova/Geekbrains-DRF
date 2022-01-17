@@ -6,16 +6,16 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('todoapp', '0001_initial'),
+        ("todoapp", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='project',
-            options={'ordering': ['name']},
+            name="project",
+            options={"ordering": ["name"]},
         ),
         migrations.AlterModelOptions(
-            name='todo',
-            options={'ordering': ['-date_updated']},
+            name="todo",
+            options={"ordering": ["-date_updated"]},
         ),
     ]
