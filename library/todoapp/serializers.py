@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer, StringRelatedField
 
-from .models import Project, TODO
+from .models import TODO, Project
 
 
 class ProjectModelSerializer(ModelSerializer):

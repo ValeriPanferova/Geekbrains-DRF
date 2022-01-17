@@ -1,11 +1,11 @@
-from rest_framework.viewsets import ModelViewSet
-from rest_framework.pagination import PageNumberPagination
 from rest_framework import status
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
 
-from .models import Project, TODO
-from .serializers import ProjectModelSerializer, TODOModelSerializer
 from .filters import ProjectFilter, TODOFilter
+from .models import TODO, Project
+from .serializers import ProjectModelSerializer, TODOModelSerializer
 
 
 class ProjectPageNumberPagination(PageNumberPagination):
