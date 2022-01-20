@@ -1,16 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const MenuItem = ({item}) => {
     return (
-        <li><a href="{item.url}">{item.name}</a></li>
+        <li><Link to="{item.url}">{item.name}</Link></li>
     )
 }
 
 const MenuItemList = ({menu}) => {
     return (
-        <ul>
-            {menu.map((item) => <MenuItem item={item} />)}
-        </ul>
+        <nav>
+            <ul>
+                {menu.map((item) => <MenuItem item={item} />)}
+            </ul>
+        </nav>
     )
 }
 
