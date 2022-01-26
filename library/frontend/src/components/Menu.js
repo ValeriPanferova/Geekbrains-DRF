@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const MenuItem = ({item}) => {
     return (
-        <li><Link to="{item.url}">{item.name}</Link></li>
+        <li><Link to="{item.link}">{item.name}</Link></li>
     )
 }
 
