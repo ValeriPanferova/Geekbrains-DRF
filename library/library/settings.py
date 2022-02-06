@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+# Resolve ImportError: cannot import name 'force_text' from 'django.utils.encoding' in Django 4
+import django
+from django.utils.encoding import force_str
+
+django.utils.encoding.force_text = force_str
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "graphene_django",
     "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
@@ -149,3 +156,5 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.URLPathVersioning",
 }
+
+GRAPHENE = {"SCHEMA": "library.schema.schema"}
