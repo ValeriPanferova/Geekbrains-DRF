@@ -22,7 +22,6 @@ from graphene_django.views import GraphQLView
 from rest_framework import permissions
 from rest_framework.authtoken import views
 from rest_framework.routers import DefaultRouter
-
 from todoapp.views import ProjectModelViewSet, TODOModelViewSet
 from userapp.views import UserCustomViewSet
 
